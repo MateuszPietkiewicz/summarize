@@ -1,16 +1,12 @@
 [rules]
 possibly-unresolved-reference = "error"
-incompatible-call-arguments   = "error"
-missing-return                = "error"
-incompatible-assignment       = "error"
 index-out-of-bounds           = "warn"
 
 [environment]
 python = "./.venv"
 python-version = "3.13"
-python-platform = "linux"
+python-platform = "all"
 root = ["./src", "./tests"]
-extra-paths = ["./shared"]
 
 [src]
 include = ["src", "tests"]
@@ -21,24 +17,17 @@ exclude = [
   "!generated/important.py"
 ]
 respect-ignore-files = true
-
-[[overrides]]
-include = ["tests/**", "**/test_*.py"]
-[overrides.rules]
-missing-return = "warn"
-incompatible-assignment = "warn"
-
-[[overrides]]
-include = ["generated/**"]
-[overrides.rules]
-possibly-unresolved-reference = "ignore"
-incompatible-call-arguments   = "ignore"
-
-[[overrides]]
-include = ["tools/**", "scripts/**"]
-[overrides.rules]
-missing-type-arguments = "warn"
-
 [terminal]
 error-on-warning = false
 output-format = "full"
+
+
+
+
+
+
+
+
+
+
+
