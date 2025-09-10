@@ -14,7 +14,8 @@ exclude = [
   "build", "dist", ".tox", ".nox", ".venv", "node_modules",
   "tests/fixtures/**",
   "generated/**",
-  "!generated/important.py"
+  "!generated/important.py",
+  "**/*\\~"
 ]
 respect-ignore-files = true
 [terminal]
